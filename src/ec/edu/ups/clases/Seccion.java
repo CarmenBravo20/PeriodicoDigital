@@ -6,7 +6,7 @@
 package ec.edu.ups.clases;
 
 /**
- *
+ * 
  * @author Carmen Bravo
  */
 public class Seccion {
