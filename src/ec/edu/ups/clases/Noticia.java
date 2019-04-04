@@ -5,20 +5,31 @@
  */
 package ec.edu.ups.clases;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
- * @author  Carmen Bravo
+ * @author Carmen Bravo
  */
+//Nombre de la clase
 public class Noticia {
 
+    //son los atributos de la clase Noticia
     private String tituloNoticia;
     private String autor;
     private String lugar;
-    private Date fecha;
+    private Date fechaPublicacion;
     private String contenido;
-    private Multimedia multimedia;
+    private List<Multimedia> multimedias;
+    
+    /**
+     * Es un Constructor
+     */
+     public Noticia(){ 
+        multimedias= new ArrayList();
+    }
 
     public void setTituloNoticia(String tituloNoticia) {
         this.tituloNoticia = tituloNoticia;
@@ -27,25 +38,22 @@ public class Noticia {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-    
-     public void setLugar(String lugar) {
+
+    public void setLugar(String lugar) {
         this.lugar = lugar;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFechaPublicacion(Date fechaPublicacion) {
+        this.fechaPublicacion = fechaPublicacion;
     }
 
     public void setContenido(String contenido) {
         this.contenido = contenido;
     }
 
-    public void setMultimedia(Multimedia multimedia) {
-        this.multimedia = multimedia;
+    public void setMultimedias(List<Multimedia> multimedias) {
+        this.multimedias = multimedias;
     }
-
-  
-    
 
     public String getTituloNoticia() {
         return tituloNoticia;
@@ -58,21 +66,31 @@ public class Noticia {
     public String getLugar() {
         return lugar;
     }
-    
-    
-    public Date getFecha() {
-        return fecha;
+
+    public Date getFechaPublicacion() {
+        return fechaPublicacion;
     }
 
     public String getContenido() {
         return contenido;
     }
 
-    public Multimedia getMultimedia() {
-        return multimedia;
+    public List<Multimedia> getMultimedias() {
+        return multimedias;
     }
 
+    public void agregarMultimedia(Multimedia multimedia) {
+
+        multimedias.add(multimedia);
+    }
+
+    @Override
+    public String toString() {
+        return "Noticia{" + "tituloNoticia=" + tituloNoticia + ", autor=" + autor + ", lugar=" + lugar + ", fechaPublicacion=" + fechaPublicacion + ", contenido=" + contenido + ", multimedias=" + multimedias + '}';
+    }
+
+    
+
    
-    
-    
+
 }

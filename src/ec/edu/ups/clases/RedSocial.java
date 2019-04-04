@@ -9,33 +9,59 @@ package ec.edu.ups.clases;
  *
  * @author Carmen Bravo
  */
+//nombre de la clase
 public class RedSocial {
-    private int  codigo;
+    //atributos de la clase RedSocial
+    private int codigo;
     private String nombre;
     private String url;
-    private String[] publicaciones;
     
-    public void setCodigo(int codigo){
-        this.codigo=codigo;
+
+    /**
+     *
+     * @param codigo
+     */
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
     }
-    
-    public void setNombre(String nombre){
-        this.nombre=nombre;      
+
+    /**
+     *
+     * @param nombre
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
-    
-    public void setUrl(String url){
-        this.url=url;
+
+    /**
+     *
+     * @param url
+     */
+    public void setUrl(String url) {
+        this.url = url;
     }
-    
-    public int getCodigo(){
+
+    /**
+     *
+     * @return codigo
+     */
+    public int getCodigo() {
         return this.codigo;
     }
-    
-    public String getNombre(){
+
+    /**
+     *
+     * @return nombre
+     */
+    public String getNombre() {
         return this.nombre;
     }
-    
-    public String getUrl(){
+
+    /**
+     *
+     * @return url
+     */
+    public String getUrl() {
         return this.url;
     }
 }
